@@ -1,0 +1,21 @@
+Número de expediente: EXP-2026-884
+
+Se ha realizado el cálculo de la penalización. Según la tasa diaria de 1.5% sobre el monto de $350,000 MXN, la multa total a pagar por 7 días efectivos es: 
+
+Cálculo: $350,000 MXN * 1.5% * 7 días = $36,750 MXN
+
+Pasos a seguir:
+1. Notificar al representante legal de la multa.
+2. Solicitar ratificación del nuevo cronograma antes del 30 de Octubre de 2026.
+3. Establecer un plazo de pago para la multa.
+4. Iniciar trámite para cobro de la multa si no se cumple con el plazo.
+5. Documentar todos los pasos de la resolución.
+
+Estado actual: Pendiente de resolución.
+
+Detalles del caso:
+- Empresa proveedora: Logística Global S.A.
+- Demora en la entrega: 12 días
+- Razón: Fallas logísticas en aduanas
+- Monto retenido: $350,000 MXN
+- Gracia diaria: 5 días hábiles
