@@ -1,0 +1,15 @@
+EXPEDIENTE: EXP-2026-884
+FECHA DE RECEPCIÓN: 24 de Octubre de 2026
+ASUNTO: Revisión de cumplimiento de entrega de suministros de cómputo.
+ESTADO ACTUAL: Pendiente de resolución.
+
+DETALLES DEL CASO:
+La empresa proveedora 'Logística Global S.A.' reporta una demora de 12 días en la entrega
+del lote de servidores debido a fallas logísticas en aduanas. 
+El contrato estipula una penalización del 1.5% diario sobre el monto retenido ($350,000 MXN) 
+después del quinto día hábil de gracia.
+
+ACCIONES REQUERIDAS:
+1. Calcular el monto total acumulado de la penalización correspondiente a 7 días efectivos.
+2. Emitir notificación administrativa al representante legal.
+3. Solicitar ratificación del nuevo cronograma antes del 30 de Octubre de 2026.
