@@ -31,7 +31,7 @@ Control por Roles: Se establece una jerarquía de cuatro roles de comunicación:
 
 "tool": Devuelve al contexto del modelo la información cruda obtenida físicamente por el script.
 
-## 3. Hitos de Implementación y Validación TécnicaHito
+## 3. Hitos de Implementación y Validación Técnica
   
   Hito 1: Despliegue del Backend Local y Verificación CUDASe instaló ollama-cuda para garantizar el uso exclusivo de la memoria gráfica dedicada. 
   
@@ -57,9 +57,21 @@ Se incorporó una segunda función física: guardar_archivo, permitiendo al agen
 Hallazgo técnico (Capacidad de Autocorrección): 
 Durante la prueba empírica, el modelo intentó emitir una respuesta anticipada en el Ciclo 1; no obstante, al contar con un ciclo agéntico cerrado, ejecutó la lectura en el Ciclo 2 y procedió a sobrescribir el archivo en el Ciclo 3, alcanzando una precisión aritmética del 100% ($350,000 \times 0.015 \times 7 = \$36,750\text{ MXN}$) e identificando el expediente legítimo EXP-2026-884
 
+Hito 5: Orquestación Multi-Agente Desacoplada (Extractor + Auditor). Para suprimir de raíz los intentos de deducción anticipada, se transitó hacia una arquitectura modular con dos agentes especializados y permisos segregados:
+
+1 . Agente Extractor (Investigador): Dotado únicamente de la herramienta leer_expediente. Su System Prompt le prohíbe explícitamente tomar decisiones o generar dictámenes; únicamente entrega una estructura de hechos.
+2 . Agente Auditor (Dictaminador): Dotado únicamente de la herramienta archivar_resolucion. Recibe como entrada textual el resultado limpio del primer agente, aplica la regla de negocio y genera el documento resolutivo formal.
 
 
+<img width="776" height="422" alt="image" src="https://github.com/user-attachments/assets/e0f942e5-5cd2-4592-8452-2fd0c09ef612" />
 
+Resultado final: El flujo se ejecutó en 30 segundos. La salida inspeccionada mediante el comando de terminal cat dictamen_final_auditado.txt evidenció una estructura jurídica/administrativa impecable, con desglose de días de gracia, días efectivos de penalización y cálculo sancionatorio exacto.
+
+## 4. Conclusiones y Proyección ProfesionalSoberanía y Seguridad de Datos: 
+
+Al operar sobre un stack completamente local (CachyOS + ollama-cuda + Qwen 2.5), ningún dato procesado viaja a servidores externos, cumpliendo con las regulaciones más estrictas de confidencialidad y secreto corporativo.   Eficiencia en Hardware Convencional: Se comprobó que una GPU de gama media para laptops (RTX 4070 Mobile con 8 GB de VRAM) es capaz de sostener tasas de inferencia superiores a los 20 tokens por segundo en modelos de 7B parámetros, suficientes para automatizar flujos administrativos en tiempo real.   
+
+Escalabilidad Modular: La arquitectura multi-agente implementada permite añadir nuevos módulos de manera trivial (por ejemplo: validación de firmas digitales, envío de alertas por correo electrónico o indexación en bases de datos relacionales SQLite) simplemente agregando herramientas en Python y encadenando el flujo de mensajes.
 
 
 
